@@ -12,7 +12,7 @@ import type { ActionItem } from '@/types';
 // Demo action items
 const DEMO_ITEMS: Partial<ActionItem>[] = [
     {
-        $id: '1',
+        id: '1',
         actionId: 'ACT-001',
         clientId: 'demo',
         text: 'Upload Q3 2025 electricity bills for all California facilities',
@@ -23,7 +23,7 @@ const DEMO_ITEMS: Partial<ActionItem>[] = [
         createdAt: '2025-06-01T00:00:00Z',
     },
     {
-        $id: '2',
+        id: '2',
         actionId: 'ACT-002',
         clientId: 'demo',
         text: 'Confirm fleet vehicle fuel records for fiscal year 2025',
@@ -34,7 +34,7 @@ const DEMO_ITEMS: Partial<ActionItem>[] = [
         createdAt: '2025-06-01T00:00:00Z',
     },
     {
-        $id: '3',
+        id: '3',
         actionId: 'ACT-003',
         clientId: 'demo',
         text: 'Review and sign the GHG inventory report for FY2024',
@@ -45,7 +45,7 @@ const DEMO_ITEMS: Partial<ActionItem>[] = [
         createdAt: '2025-05-15T00:00:00Z',
     },
     {
-        $id: '4',
+        id: '4',
         actionId: 'ACT-004',
         clientId: 'demo',
         text: 'Provide HVAC refrigerant type and recharge logs',

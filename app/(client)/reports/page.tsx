@@ -12,7 +12,7 @@ import type { Report } from '@/types';
 // Demo reports
 const DEMO_REPORTS: Partial<Report>[] = [
     {
-        $id: '1',
+        id: '1',
         reportId: 'RPT-2025-001',
         clientId: 'demo',
         reportingYear: 2025,
@@ -25,7 +25,7 @@ const DEMO_REPORTS: Partial<Report>[] = [
         createdAt: '2025-06-15T00:00:00Z',
     },
     {
-        $id: '2',
+        id: '2',
         reportId: 'RPT-2024-001',
         clientId: 'demo',
         reportingYear: 2024,
