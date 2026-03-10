@@ -108,7 +108,10 @@ export default function LandingPage() {
                                 I&apos;m a TÜV SÜD ISO 14064 certified GHG specialist with an MS in Industrial Technology and 5+ years of data engineering experience.
                             </p>
                             <p>
-                                I created GHG Shield because mid-size California companies deserve expert-led GHG compliance without the $100,000 price tag of a Big 4 firm.
+                                I created GHG Shield because mid-size companies deserve expert-led GHG compliance without the $100,000 price tag of a Big 4 firm.
+                            </p>
+                            <p>
+                                I work with companies across the US, Australia, Singapore, and India — wherever emissions regulations are tightening and affordable expert help is hard to find.
                             </p>
                             <div className="pl-5 border-l-2 border-[#4CAF80]/50 py-1">
                                 <p className="font-medium text-white italic">
