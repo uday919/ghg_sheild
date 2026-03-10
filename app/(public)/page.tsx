@@ -214,19 +214,19 @@ export default function LandingPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {[
                             {
-                                name: 'Standard',
+                                name: 'Core',
                                 setupFee: '$4,999',
-                                monthly: '$1,999',
-                                retainer: '$23,988',
+                                monthly: '$1,499',
+                                retainer: '$17,988',
                                 description: '1–3 facilities',
                                 features: ['1–3 facilities', 'Scope 1 & 2 emissions', 'Dashboard access', 'Data storage', 'Annual GHG inventory report', 'ISO-aligned documentation', 'Monthly updates'],
                                 popular: false,
                             },
                             {
-                                name: 'Enterprise',
+                                name: 'Advanced',
                                 setupFee: '$9,999',
-                                monthly: '$3,999',
-                                retainer: '$47,988',
+                                monthly: '$2,499',
+                                retainer: '$29,988',
                                 description: 'Unlimited facilities',
                                 features: ['Unlimited facilities', 'Scope 1, 2, 3 emissions', 'Supplier emissions', 'Custom emission factors', 'Audit / verification preparation', 'Priority support', 'Custom reporting'],
                                 popular: true,
@@ -306,16 +306,16 @@ export default function LandingPage() {
                                 <div className="flex flex-col justify-center flex-shrink-0 w-full md:w-auto md:min-w-[240px] md:border-l md:border-[#1a5c3844] md:pl-8">
                                     <div className="mb-2">
                                         <div className="text-sm text-gray-400 mb-1">Implementation Fee</div>
-                                        <div className="text-3xl font-bold text-white font-[family-name:var(--font-dm-mono)]">$7,999</div>
+                                        <div className="text-3xl font-bold text-white font-[family-name:var(--font-dm-mono)]">$7,499</div>
                                     </div>
 
                                     <div className="mt-4 pt-4 border-t border-[#1a5c3844]">
                                         <div className="text-sm text-gray-400 mb-1">Annual Retainer</div>
                                         <div className="flex items-baseline gap-1">
-                                            <div className="text-xl font-bold text-[#4CAF80] font-[family-name:var(--font-dm-mono)]">$29,988</div>
+                                            <div className="text-xl font-bold text-[#4CAF80] font-[family-name:var(--font-dm-mono)]">${(2999 * 12).toLocaleString()}</div>
                                             <div className="text-sm text-gray-400">/year</div>
                                         </div>
-                                        <div className="text-xs text-gray-500 mt-1">Billed at $2,499/mo</div>
+                                        <div className="text-xs text-gray-500 mt-1">Billed at $2,999/mo</div>
                                     </div>
 
                                     <Link

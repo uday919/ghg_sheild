@@ -16,20 +16,20 @@ export async function POST(req: NextRequest) {
         }
 
         const tiers: Record<string, { setupFee: number; monthlyFee: number; description: string }> = {
-            standard: {
+            core: {
                 setupFee: 4999,
-                monthlyFee: 1999,
-                description: 'GHG Shield — Standard Plan (1-3 facilities)',
+                monthlyFee: 1499,
+                description: 'GHG Shield — Core Plan (1-3 facilities)',
             },
             scope3: {
-                setupFee: 7999,
-                monthlyFee: 2499,
+                setupFee: 7499,
+                monthlyFee: 2999,
                 description: 'GHG Shield — Scope 3 Package',
             },
-            enterprise: {
+            advanced: {
                 setupFee: 9999,
-                monthlyFee: 3999,
-                description: 'GHG Shield — Enterprise Plan (Unlimited facilities)',
+                monthlyFee: 2499,
+                description: 'GHG Shield — Advanced Plan (Unlimited facilities)',
             },
         };
 

@@ -13,10 +13,10 @@ interface SubscriptionStatusProps {
 }
 
 export function SubscriptionStatus({
-    plan = 'Standard',
+    plan = 'Core',
     status = 'active',
     nextBillingDate,
-    monthlyFee = 1999,
+    monthlyFee = 1499,
 }: SubscriptionStatusProps) {
     const statusConfig = {
         active: { label: 'Active', variant: 'success' as const },

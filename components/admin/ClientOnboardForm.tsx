@@ -45,7 +45,7 @@ export function ClientOnboardForm({ isOpen, onClose, onSubmit }: ClientOnboardFo
         resolver: zodResolver(clientSchema) as any,
         defaultValues: {
             setupFee: 4999,
-            monthlyFee: 1999,
+            monthlyFee: 1499,
             fiscalYearStart: `${new Date().getFullYear()}-01-01`,
             fiscalYearEnd: `${new Date().getFullYear()}-12-31`,
         },

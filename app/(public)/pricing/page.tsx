@@ -34,10 +34,10 @@ export default function PricingPage() {
 
     const tiers = [
         {
-            id: 'standard',
-            name: 'Standard',
+            id: 'core',
+            name: 'Core',
             setupFee: 4999,
-            monthly: 1999,
+            monthly: 1499,
             description: 'Perfect for companies with 1–3 facilities',
             features: [
                 '1–3 facilities',
@@ -51,10 +51,10 @@ export default function PricingPage() {
             popular: false,
         },
         {
-            id: 'enterprise',
-            name: 'Enterprise',
+            id: 'advanced',
+            name: 'Advanced',
             setupFee: 9999,
-            monthly: 3999,
+            monthly: 2499,
             description: 'For organizations needing comprehensive coverage',
             features: [
                 'Unlimited facilities',
@@ -233,15 +233,15 @@ export default function PricingPage() {
                         <div className="flex flex-col justify-center flex-shrink-0 lg:w-[320px] lg:border-l lg:border-[#1a5c3844] lg:pl-10">
                             <div className="mb-4">
                                 <span className="text-sm text-gray-400 mb-1 block">Implementation Fee</span>
-                                <span className="text-4xl font-bold font-[family-name:var(--font-dm-mono)]">$7,999</span>
+                                <span className="text-4xl font-bold font-[family-name:var(--font-dm-mono)]">$7,499</span>
                             </div>
                             <div className="mb-8 pt-4 border-t border-[#1a5c3844]">
                                 <span className="text-sm text-gray-400 mb-1 block">Annual Retainer</span>
                                 <div className="flex items-baseline">
-                                    <span className="text-3xl font-bold text-[#4CAF80] font-[family-name:var(--font-dm-mono)]">$29,988</span>
+                                    <span className="text-3xl font-bold text-[#4CAF80] font-[family-name:var(--font-dm-mono)]">${(2999 * 12).toLocaleString()}</span>
                                     <span className="text-gray-400 ml-1/year">/year</span>
                                 </div>
-                                <div className="text-xs text-gray-500 mt-1">Billed at $2,499/mo</div>
+                                <div className="text-xs text-gray-500 mt-1">Billed at $2,999/mo</div>
                             </div>
 
                             <button
