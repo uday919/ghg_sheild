@@ -6,6 +6,8 @@ import { clerkClient } from '@clerk/nextjs/server';
 import { supabase } from '@/lib/supabase';
 import { sendEmail, welcomeEmail } from '@/lib/email';
 
+export const dynamic = 'force-dynamic';
+
 function generateTempPassword(): string {
     const chars = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789!@#$';
     let pw = '';

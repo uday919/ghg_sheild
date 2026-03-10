@@ -8,6 +8,8 @@ import { generateReportWithClaude } from '@/lib/claude';
 import { aggregateByScope, aggregateByCategory } from '@/lib/calculations';
 import type { Client, EmissionData, Facility } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
     try {
         const { reportId, clientId } = await req.json();

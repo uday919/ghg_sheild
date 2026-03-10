@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 import { keysToCamelCase } from '@/lib/utils';
 
+export const dynamic = 'force-dynamic';
+
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 
 export async function POST(req: Request) {

@@ -7,6 +7,8 @@ import { supabase } from '@/lib/supabase';
 import { verifyWebhookSignature, createSubscription } from '@/lib/dodpayments';
 import { sendEmail, welcomeEmail, adminAlertEmail } from '@/lib/email';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
     try {
         const body = await req.text();
