@@ -40,9 +40,11 @@ export default function LandingPage() {
                 <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#4CAF80]/5 rounded-full blur-3xl" />
 
                 <div className="relative max-w-5xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#4CAF80]/10 border border-[#4CAF80]/20 rounded-full text-sm text-[#4CAF80] mb-8">
-                        <Award className="w-4 h-4" />
-                        ISO 14064 Certified Consultant
+                    <div className="inline-flex items-center flex-wrap justify-center gap-2 px-5 py-2 bg-[#4CAF80]/10 border border-[#4CAF80]/20 rounded-full text-sm font-semibold text-[#4CAF80] mb-8 max-w-3xl">
+                        <Award className="w-4 h-4 flex-shrink-0" />
+                        <span className="text-center leading-snug">
+                            TÜV SÜD ISO 14064 Certified <span className="text-gray-500 mx-1">|</span> MS Industrial Technology <span className="text-gray-500 mx-1">|</span> PRISM Framework™ <span className="text-gray-500 mx-1">|</span> EP®(GHG) Designated
+                        </span>
                     </div>
 
                     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-syne)] leading-tight mb-6">
@@ -77,6 +79,40 @@ export default function LandingPage() {
                         <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-[#4CAF80]" /> SB 253 Compliant</span>
                         <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-[#4CAF80]" /> ISO 14064</span>
                         <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-[#4CAF80]" /> GHG Protocol</span>
+                    </div>
+                </div>
+            </section>
+
+            {/* Founder Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-[#1a5c3844] bg-[#0d1a0d]/30">
+                <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                    <div className="flex-1">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#4CAF80]/10 border border-[#4CAF80]/20 rounded-full text-xs font-bold text-[#4CAF80] mb-6 tracking-wider uppercase">
+                            Principal Consultant
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-6">
+                            Hi, I&apos;m Kallem Udaykiran
+                        </h2>
+                        <div className="space-y-5 text-lg text-gray-300 leading-relaxed">
+                            <p>
+                                I&apos;m a TÜV SÜD ISO 14064 certified GHG specialist with an MS in Industrial Technology and 5+ years of data engineering experience.
+                            </p>
+                            <p>
+                                I created GHG Shield because mid-size California companies deserve expert-led GHG compliance without the $100,000 price tag of a Big 4 firm.
+                            </p>
+                            <div className="pl-5 border-l-2 border-[#4CAF80]/50 py-1">
+                                <p className="font-medium text-white italic">
+                                    Every client gets me — not a junior analyst, not a software bot. A certified specialist who understands your operations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-56 h-56 md:w-72 md:h-72 flex-shrink-0 rounded-full bg-gradient-to-br from-[#1a5c38] to-[#0a0f0a] border-4 border-[#4CAF80]/20 flex items-center justify-center p-1 shadow-2xl shadow-[#4CAF80]/5 relative">
+                        <div className="absolute inset-0 rounded-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+                        <div className="w-full h-full rounded-full bg-[#0d1a0d] flex flex-col items-center justify-center border-2 border-[#1a5c3844] z-10">
+                            <span className="text-6xl font-bold text-[#4CAF80] font-[family-name:var(--font-syne)] tracking-tighter">KU</span>
+                            <Shield className="w-6 h-6 text-[#4CAF80]/50 mt-2" />
+                        </div>
                     </div>
                 </div>
             </section>
