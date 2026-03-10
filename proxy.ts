@@ -12,12 +12,20 @@ const isProtectedRoute = createRouteMatcher([
     '/admin(.*)'
 ]);
 
-export default clerkMiddleware(async (auth, req) => {
+export const proxy = clerkMiddleware(async (auth, req) => {
     // If the user isn't authenticated and trying to access a protected route, Clerk will redirect them to sign-in
     if (isProtectedRoute(req)) {
-        await auth.protect();
+        try {
+            await auth.protect();
+        } catch (err) {
+            console.error('Middleware Auth Protect Error:', err);
+            // Re-throw so Clerk handles it, but we log the potential key issue
+            throw err;
+        }
     }
 });
+
+export default proxy;
 
 export const config = {
     matcher: [
