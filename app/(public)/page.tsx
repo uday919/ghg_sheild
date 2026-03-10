@@ -75,6 +75,16 @@ export default function LandingPage() {
                         </a>
                     </div>
 
+                    <div className="mt-12 inline-flex flex-col items-center p-5 bg-[#ff4d4d]/10 border border-[#ff4d4d]/20 rounded-xl max-w-xl mx-auto backdrop-blur-sm shadow-lg shadow-[#ff4d4d]/5">
+                        <div className="flex items-center gap-2 text-[#ff4d4d] font-bold mb-2 text-lg">
+                            <Clock className="w-5 h-5" />
+                            <span>SB 253 Deadline: August 10, 2026</span>
+                        </div>
+                        <p className="text-sm text-gray-300 text-center font-medium">
+                            Data collection takes 6–8 weeks. Available spots filling fast.
+                        </p>
+                    </div>
+
                     <div className="flex items-center justify-center gap-8 mt-12 text-sm text-gray-500">
                         <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-[#4CAF80]" /> SB 253 Compliant</span>
                         <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-[#4CAF80]" /> ISO 14064</span>
@@ -196,6 +206,42 @@ export default function LandingPage() {
                                     {item.title}
                                 </h3>
                                 <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* PRISM Framework */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-[#1a5c3844] bg-gradient-to-b from-[#0a0f0a] to-[#0d1a0d]/30">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#4CAF80]/10 border border-[#4CAF80]/20 rounded-full text-xs font-bold text-[#4CAF80] mb-4 tracking-wider uppercase">
+                            Exclusive Process
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-4">
+                            Our Methodology — The PRISM Framework™
+                        </h2>
+                        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                            The only GHG compliance methodology built specifically for industrial operations.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+                        {[
+                            { letter: 'P', title: 'Process Mapping', desc: 'Identify emission sources across operations' },
+                            { letter: 'R', title: 'Raw Data Architecture', desc: 'Structure utility and operational data' },
+                            { letter: 'I', title: 'Inventory Calculation', desc: 'Apply EPA and eGRID methodologies' },
+                            { letter: 'S', title: 'Structured Verification', desc: 'Prepare audit-ready trails for CPAs' },
+                            { letter: 'M', title: 'Management Intelligence', desc: 'Deliver actionable insights via dashboard' }
+                        ].map((item, idx) => (
+                            <div key={idx} className="bg-[#0d1a0d] border border-[#1a5c3844] rounded-2xl p-6 text-center hover:border-[#4CAF80]/40 transition-all flex flex-col items-center group shadow-lg shadow-black/20 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-16 h-16 bg-[#4CAF80]/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                                <div className="w-16 h-16 rounded-full bg-[#1a2e1a] border border-[#4CAF80]/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-[#4CAF80]/20 transition-all shadow-inner">
+                                    <span className="text-3xl font-black text-[#4CAF80] font-[family-name:var(--font-syne)] tracking-tighter">{item.letter}</span>
+                                </div>
+                                <h3 className="font-bold text-white mb-3 leading-tight font-[family-name:var(--font-syne)]">{item.title}</h3>
+                                <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -415,11 +461,6 @@ export default function LandingPage() {
             {/* CTA */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-[#1a5c3844] bg-gradient-to-b from-[#0d1a0d] to-[#0a0f0a]">
                 <div className="max-w-3xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-red-500/10 border border-red-500/20 rounded-full text-sm text-red-400 mb-6">
-                        <Clock className="w-4 h-4" />
-                        Deadline: August 10, 2026
-                    </div>
-
                     <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-6">
                         Don&apos;t Wait Until It&apos;s Too Late
                     </h2>
@@ -449,9 +490,9 @@ export default function LandingPage() {
                         <span className="text-xs text-gray-500 ml-2">© {new Date().getFullYear()}</span>
                     </div>
                     <div className="flex items-center gap-6 text-sm text-gray-500">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                        <a href="mailto:support@ghgshield.com" className="hover:text-white transition-colors">Contact</a>
+                        <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+                        <a href="mailto:hello@ghgshield.com" className="hover:text-white transition-colors">Contact</a>
                     </div>
                 </div>
             </footer>
