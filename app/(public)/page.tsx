@@ -18,13 +18,13 @@ export default function LandingPage() {
                         </div>
                         <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
                             <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
-                            <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+                            <Link href="/academy" className="hover:text-white transition-colors">Academy</Link>
                             <a href="#features" className="hover:text-white transition-colors">Features</a>
                             <Link href="/login" className="text-[#4CAF80] hover:text-[#5DC090] transition-colors font-medium">
                                 Client Login
                             </Link>
                             <Link
-                                href="/pricing"
+                                href="/academy"
                                 className="bg-[#4CAF80] text-black px-4 py-2 rounded-lg font-medium hover:bg-[#3d9d6f] transition-colors"
                             >
                                 Get Started
@@ -60,7 +60,7 @@ export default function LandingPage() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
-                            href="/pricing"
+                            href="/academy"
                             className="inline-flex items-center gap-2 bg-[#4CAF80] text-black px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#3d9d6f] transition-all hover:scale-105"
                         >
                             Get Started
@@ -284,153 +284,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Pricing */}
-            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-[#1a5c3844] bg-[#0d1a0d]/50">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-4">
-                            Simple, Transparent Pricing
-                        </h2>
-                        <p className="text-gray-400">
-                            No hidden fees. No surprise invoices. Just full compliance.
-                        </p>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {[
-                            {
-                                name: 'Core',
-                                setupFee: '$4,999',
-                                monthly: '$1,499',
-                                retainer: '$17,988',
-                                description: '1–3 facilities',
-                                features: ['1–3 facilities', 'Scope 1 & 2 emissions', 'Dashboard access', 'Data storage', 'Annual GHG inventory report', 'ISO-aligned documentation', 'Monthly updates'],
-                                popular: false,
-                            },
-                            {
-                                name: 'Advanced',
-                                setupFee: '$9,999',
-                                monthly: '$2,499',
-                                retainer: '$29,988',
-                                description: 'Unlimited facilities',
-                                features: ['Unlimited facilities', 'Scope 1, 2, 3 emissions', 'Supplier emissions', 'Custom emission factors', 'Audit / verification preparation', 'Priority support', 'Custom reporting'],
-                                popular: true,
-                            },
-                        ].map((tier, idx) => (
-                            <div
-                                key={idx}
-                                className={`relative bg-[#0d1a0d] border rounded-2xl p-8 ${tier.popular ? 'border-[#4CAF80] shadow-lg shadow-[#4CAF80]/10' : 'border-[#1a5c3844]'
-                                    }`}
-                            >
-                                {tier.popular && (
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#4CAF80] text-black text-xs font-bold px-4 py-1 rounded-full">
-                                        MOST POPULAR
-                                    </div>
-                                )}
-                                <h3 className="text-xl font-bold text-white font-[family-name:var(--font-syne)]">{tier.name}</h3>
-                                <p className="text-sm text-gray-400 mt-1">{tier.description}</p>
-
-                                <div className="my-6">
-                                    <div className="mb-1 text-sm text-gray-400">Implementation Fee</div>
-                                    <div className="flex items-baseline gap-1">
-                                        <span className="text-4xl font-bold text-white font-[family-name:var(--font-dm-mono)]">{tier.setupFee}</span>
-                                    </div>
-
-                                    <div className="mt-4 pt-4 border-t border-[#1a5c3844]">
-                                        <div className="mb-1 text-sm text-gray-400">Annual Carbon Accounting Retainer</div>
-                                        <div className="flex items-baseline gap-1">
-                                            <span className="text-2xl font-bold text-[#4CAF80] font-[family-name:var(--font-dm-mono)]">{tier.retainer}</span>
-                                            <span className="text-sm text-gray-400">/year</span>
-                                        </div>
-                                        <div className="text-xs text-gray-500 mt-1">Billed at {tier.monthly}/mo</div>
-                                    </div>
-                                </div>
-
-                                <ul className="space-y-3 mb-8">
-                                    {tier.features.map((f, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                                            <CheckCircle className="w-4 h-4 text-[#4CAF80]" />
-                                            {f}
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <Link
-                                    href="/pricing"
-                                    className={`block text-center py-3 px-6 rounded-xl font-medium transition-all ${tier.popular
-                                        ? 'bg-[#4CAF80] text-black hover:bg-[#3d9d6f]'
-                                        : 'border border-[#1a5c3844] text-gray-300 hover:bg-[#1a2e1a]'
-                                        }`}
-                                >
-                                    Get Started
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Standalone Packages */}
-                    <div className="mt-16 max-w-4xl mx-auto">
-                        <div className="bg-[#000000] border border-[#1a5c3844] rounded-2xl p-8 hover:border-[#4CAF80]/40 transition-colors shadow-lg shadow-black/50">
-                            <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-                                <div className="flex-1">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <h4 className="text-2xl font-bold text-white font-[family-name:var(--font-syne)]">Scope 3 Package</h4>
-                                        <span className="bg-gray-800 text-[#4CAF80] text-xs font-bold px-3 py-1 rounded-full border border-gray-700">STANDALONE</span>
-                                    </div>
-                                    <p className="text-gray-400">Deep supply chain visibility for organizations facing SEC, CARB, or vendor-driven reporting requirements.</p>
-
-                                    <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {['Scope 3 screening assessment', 'Category-level calculations', 'Supplier data collection templates', 'Spend-based emissions estimates', 'Scope 3 reporting documentation', 'Dashboard integration'].map((f, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                                                <CheckCircle className="w-4 h-4 text-[#4CAF80] mt-0.5 flex-shrink-0" />
-                                                {f}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                                <div className="flex flex-col justify-center flex-shrink-0 w-full md:w-auto md:min-w-[240px] md:border-l md:border-[#1a5c3844] md:pl-8">
-                                    <div className="mb-2">
-                                        <div className="text-sm text-gray-400 mb-1">Implementation Fee</div>
-                                        <div className="text-3xl font-bold text-white font-[family-name:var(--font-dm-mono)]">$7,499</div>
-                                    </div>
-
-                                    <div className="mt-4 pt-4 border-t border-[#1a5c3844]">
-                                        <div className="text-sm text-gray-400 mb-1">Annual Retainer</div>
-                                        <div className="flex items-baseline gap-1">
-                                            <div className="text-xl font-bold text-[#4CAF80] font-[family-name:var(--font-dm-mono)]">${(2999 * 12).toLocaleString()}</div>
-                                            <div className="text-sm text-gray-400">/year</div>
-                                        </div>
-                                        <div className="text-xs text-gray-500 mt-1">Billed at $2,999/mo</div>
-                                    </div>
-
-                                    <Link
-                                        href="/pricing"
-                                        className="mt-6 block w-full text-center py-3 px-6 rounded-xl font-medium border border-[#4CAF80]/30 text-[#4CAF80] hover:bg-[#4CAF80]/10 transition-all"
-                                    >
-                                        Learn More
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mt-8 max-w-4xl mx-auto bg-[#0d1a0d] border border-[#1a5c3844] rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-[#4CAF80]/20 transition-colors">
-                        <div>
-                            <h4 className="text-lg font-bold text-white font-[family-name:var(--font-syne)] flex items-center gap-2">
-                                <Shield className="w-5 h-5 text-[#4CAF80]" />
-                                Optional Add-on: Assurance & Verification Support
-                            </h4>
-                            <p className="text-sm text-gray-400 mt-1 max-w-lg">
-                                We act as your liaison during the required third-party limited assurance audit, answering auditor questions and defending the methodology on your behalf.
-                            </p>
-                        </div>
-                        <div className="flex-shrink-0 text-center sm:text-right">
-                            <span className="block text-2xl font-bold text-white font-[family-name:var(--font-dm-mono)]">+$5,000</span>
-                            <span className="text-xs text-gray-500 uppercase tracking-widest mt-1">Flat Fee</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Trust */}
             <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-[#1a5c3844]">
@@ -474,7 +328,7 @@ export default function LandingPage() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
-                            href="/pricing"
+                            href="/academy"
                             className="inline-flex items-center gap-2 bg-[#4CAF80] text-black px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#3d9d6f] transition-all hover:scale-105"
                         >
                             Start Compliance Now
